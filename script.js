@@ -64,8 +64,8 @@ const range = document.querySelector("#powerRange");
 range.addEventListener("input", () => {
   const n = Number(range.value);
   document.querySelector("#powerOutput").textContent = n;
-  document.querySelector("#sourceEquation").textContent = `d(x${superscripts[n]})`;
-  document.querySelector("#resultEquation").textContent = `${n}x${superscripts[n - 1]} dx`;
+  document.querySelector("#sourceEquation").textContent = `d/dx(x${superscripts[n]})`;
+  document.querySelector("#resultEquation").textContent = `${n}x${superscripts[n - 1]}`;
 });
 
 const productRange = document.querySelector("#productRange");
