@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive story of Gottfried Wilhelm Leibniz and the mathematical language that shaped modern calculus.">
+  <title>Leibniz — The Language of Calculus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Leibniz, back to top">G.W.L. <span>/ 1646–1716</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav" aria-label="Main navigation">
+      <a href="#story">Story</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#notation">Notation</a>
+      <a href="#journey">Journey</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">A language for change</p>
+        <h1 id="hero-title">Gottfried Wilhelm<br><em>Leibniz</em></h1>
+        <p class="hero-hook">He didn’t just help invent calculus.<br><strong>He taught it how to speak.</strong></p>
+        <p class="hero-deck">Every time we write <strong>dy/dx</strong> or <strong>∫</strong>, we are using Gottfried Wilhelm Leibniz’s mathematical language—a system designed more than three centuries ago.</p>
+        <a class="text-link" href="#story">Trace the idea <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art reveal" aria-label="Abstract diagram of Leibniz calculus notation">
+        <span class="hero-integral">∫</span>
+        <span class="orbit orbit-a"><i>dx</i></span>
+        <span class="orbit orbit-b"><i>dy</i></span>
+        <span class="formula fraction"><b>dy</b><b>dx</b></span>
+        <p>summa<br><small>the sum of infinitely small parts</small></p>
+      </div>
+      <aside class="bio-strip reveal" aria-label="Leibniz biography at a glance">
+        <div><span>Born</span><strong>1646<br>Leipzig</strong></div>
+        <div><span>Died</span><strong>1716<br>Hanover</strong></div>
+        <div><span>Known for</span><strong>Calculus<br>Logic<br>Binary</strong></div>
+      </aside>
+    </section>
+
+    <section class="intro section" id="story">
+      <div class="section-number">01</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">The universal genius</p>
+        <h2>One mind.<br>Many worlds.</h2>
+      </div>
+      <div class="intro-copy reveal">
+        <p class="lead">Leibniz was a mathematician, but never only a mathematician. He moved between philosophy and law, diplomacy and engineering, always searching for systems that could make complicated thought clearer.</p>
+        <p>He entered the University of Leipzig in 1661 at just 14, studied philosophy and law, and earned a doctorate in law from the University of Altdorf in 1667. Later, he worked as a political adviser, librarian, diplomat, inventor and writer.</p>
+        <div class="roles" aria-label="Leibniz's many roles">
+          <span>Philosopher</span><span>Lawyer</span><span>Court adviser</span><span>Diplomat</span><span>Librarian</span><span>Inventor</span><span>Writer</span>
+        </div>
+        <p class="breadth-line"><strong>Other interests:</strong> religion · politics · science · logic · language · history</p>
+      </div>
+      <blockquote class="pull-quote reveal">
+        <span>“</span>
+        One of the last universal geniuses.
+        <cite>Stanford Encyclopedia of Philosophy</cite>
+      </blockquote>
+    </section>
+
+    <section class="timeline-section section dark" id="timeline">
+      <div class="section-number">02</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">A life in motion</p>
+        <h2>From law student<br>to calculus pioneer.</h2>
+        <p>Choose a year to follow the turning points.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="year-list" role="tablist" aria-label="Leibniz timeline">
+          <button role="tab" aria-selected="true" data-year="1646">1646</button>
+          <button role="tab" aria-selected="false" data-year="1661">1661</button>
+          <button role="tab" aria-selected="false" data-year="1663">1663</button>
+          <button role="tab" aria-selected="false" data-year="1667">1667</button>
+          <button role="tab" aria-selected="false" data-year="1672">1672</button>
+          <button role="tab" aria-selected="false" data-year="1673">1673</button>
+          <button role="tab" aria-selected="false" data-year="1675">1675</button>
+          <button role="tab" aria-selected="false" data-year="1676">1676</button>
+          <button role="tab" aria-selected="false" data-year="1684">1684</button>
+          <button role="tab" aria-selected="false" data-year="1686">1686</button>
+          <button role="tab" aria-selected="false" data-year="1716">1716</button>
+        </div>
+        <article class="timeline-card" id="timelineCard" aria-live="polite">
+          <span id="eventPlace">Leipzig, Germany</span>
+          <strong id="eventYear">1646</strong>
+          <h3 id="eventTitle">A restless mind arrives.</h3>
+          <p id="eventText">Gottfried Wilhelm Leibniz is born on July 1 in Leipzig.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="notation-section section" id="notation">
+      <div class="section-number">03</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">His defining contribution</p>
+        <h2>Calculus,<br>made legible.</h2>
+      </div>
+      <p class="notation-intro reveal">Leibniz independently developed differential and integral calculus around the same time as Isaac Newton. His enduring breakthrough was a notation that made relationships visible—and calculus easier to teach, use and extend.</p>
+
+      <div class="contribution-summary reveal">
+        <div>
+          <p class="eyebrow">His biggest contribution</p>
+          <h3>He gave calculus a usable symbolic system.</h3>
+        </div>
+        <ul>
+          <li><strong>dx and dy</strong><span>Symbols for very small changes in x and y.</span></li>
+          <li><strong>dy/dx</strong><span>Notation for derivatives and the comparison of two changing quantities.</span></li>
+          <li><strong>∫</strong><span>The integral sign used for integration.</span></li>
+          <li><strong>Infinitely small parts</strong><span>The idea of integration as adding infinitesimal pieces to make a whole.</span></li>
+          <li><strong>Product rule</strong><span>A rule for differentiating the product of two functions.</span></li>
+          <li><strong>Quotient rule</strong><span>A rule for differentiating one function divided by another.</span></li>
+          <li><strong>Power rule</strong><span>The form d(xⁿ) = nxⁿ⁻¹ dx.</span></li>
+        </ul>
+      </div>
+
+      <div class="notation-grid">
+        <article class="symbol-card reveal">
+          <span class="symbol">dx</span>
+          <div><p class="eyebrow">The small change</p><h3>A tiny change in <em>x</em>.</h3><p><strong>dx</strong> and <strong>dy</strong> name infinitesimal changes, giving mathematicians a compact way to reason about motion and curves.</p></div>
+        </article>
+        <article class="symbol-card reveal">
+          <span class="symbol fraction"><b>dy</b><b>dx</b></span>
+          <div><p class="eyebrow">The derivative</p><h3>How one change compares to another.</h3><p><strong>dy/dx</strong> expresses the rate at which <em>y</em> changes relative to <em>x</em>—the language students still learn today.</p></div>
+        </article>
+        <article class="symbol-card reveal">
+          <span class="symbol integral">∫</span>
+          <div><p class="eyebrow">The integral</p><h3>Infinitely small parts, added together.</h3><p>The elongated S comes from <em>summa</em>, Latin for “sum.” Integration collects tiny pieces into a whole.</p></div>
+        </article>
+      </div>
+
+      <div class="toolkit reveal">
+        <div class="toolkit-heading">
+          <p class="eyebrow">What he contributed</p>
+          <h3>A calculus toolkit—not just a set of symbols.</h3>
+        </div>
+        <article>
+          <span>1684</span>
+          <h4>Differential calculus</h4>
+          <p>A published method for finding tangents, maxima and minima, and rates of change.</p>
+        </article>
+        <article>
+          <span>1686</span>
+          <h4>Integral calculus</h4>
+          <p>A way to understand areas and totals as sums of infinitely small parts.</p>
+        </article>
+        <article>
+          <span>Rules</span>
+          <h4>A reusable system</h4>
+          <p>Rules for differentiating products, quotients and powers made calculus practical and extendable.</p>
+        </article>
+        <article>
+          <span>Language</span>
+          <h4>Modern notation</h4>
+          <p><strong>dx</strong>, <strong>dy</strong>, <strong>dy/dx</strong> and <strong>∫</strong> made relationships between changing quantities visible.</p>
+        </article>
+      </div>
+
+      <div class="rule-demo reveal">
+        <div>
+          <p class="eyebrow">A rule still in use</p>
+          <h3>The power rule</h3>
+          <p class="rule-formula">d(xⁿ) = nxⁿ⁻¹ dx</p>
+          <p>Leibniz developed a form of this rule in 1676. Move the slider to change the exponent.</p>
+          <label for="powerRange">Exponent <output id="powerOutput">3</output></label>
+          <input id="powerRange" type="range" min="2" max="9" value="3">
+        </div>
+        <div class="live-equation" aria-live="polite">
+          <span id="sourceEquation">d(x³)</span>
+          <span>=</span>
+          <span id="resultEquation">3x² dx</span>
+        </div>
+      </div>
+
+      <div class="rule-demo product-demo reveal">
+        <div>
+          <p class="eyebrow">Two functions multiplied</p>
+          <h3>The product rule</h3>
+          <p class="rule-formula">(fg)′ = f′g + fg′</p>
+          <p>Differentiate each factor in turn while leaving the other factor unchanged.</p>
+          <label for="productRange">Exponent of the second factor <output id="productOutput">3</output></label>
+          <input id="productRange" type="range" min="2" max="7" value="3">
+        </div>
+        <div class="live-equation equation-stack" aria-live="polite">
+          <small>Worked example</small>
+          <span id="productSource">d/dx (x² · x³)</span>
+          <span id="productSteps">= 2x · x³ + x² · 3x²</span>
+          <strong id="productResult">= 5x⁴</strong>
+        </div>
+      </div>
+
+      <div class="rule-demo quotient-demo reveal">
+        <div>
+          <p class="eyebrow">One function divided by another</p>
+          <h3>The quotient rule</h3>
+          <p class="rule-formula">(f/g)′ = (f′g − fg′) / g²</p>
+          <p>Differentiate the top and bottom in a precise order, then divide by the square of the denominator.</p>
+          <label for="quotientRange">Exponent in the numerator <output id="quotientOutput">4</output></label>
+          <input id="quotientRange" type="range" min="3" max="8" value="4">
+        </div>
+        <div class="live-equation equation-stack" aria-live="polite">
+          <small>Worked example</small>
+          <span id="quotientSource">d/dx (x⁴ / x²)</span>
+          <span id="quotientSteps">= (4x³ · x² − x⁴ · 2x) / (x²)²</span>
+          <strong id="quotientResult">= 2x</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section section" id="journey">
+      <div class="section-number">04</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">Ideas need places</p>
+        <h2>Four cities<br><span class="heading-line">shaped the work.</span></h2>
+      </div>
+      <div class="route-map reveal" aria-label="Leibniz's journey through Europe">
+        <svg viewBox="0 0 1000 270" preserveAspectRatio="none" role="img" aria-label="Route from Leipzig to Paris, London and Hanover">
+          <path d="M70,165 C180,165 280,146 390,146 C500,146 620,146 730,146 C810,146 865,89 920,89"/>
+        </svg>
+        <button class="city active" style="--x:7%;--y:61%" data-city="leipzig"><i></i><span>Leipzig<small>1646–67</small></span></button>
+        <button class="city" style="--x:39%;--y:54%" data-city="paris"><i></i><span>Paris<small>1672–76</small></span></button>
+        <button class="city" style="--x:73%;--y:54%" data-city="london"><i></i><span>London<small>1673</small></span></button>
+        <button class="city" style="--x:92%;--y:33%" data-city="hanover"><i></i><span>Hanover<small>1676–1716</small></span></button>
+      </div>
+      <article class="city-story reveal" id="cityStory">
+        <p class="eyebrow" id="cityKicker">Leipzig · Education</p>
+        <h3 id="cityTitle">Where the polymath began.</h3>
+        <p id="cityText">Born and educated in Leipzig, Leibniz entered university at 14. Philosophy and law trained him to search for precise systems of reasoning.</p>
+      </article>
+      <div class="people-context reveal">
+        <div>
+          <p class="eyebrow">Who was around him?</p>
+          <h3>Guided by one mentor.<br>Connected to a scientific network.</h3>
+        </div>
+        <article><strong>Christiaan Huygens</strong><span>Mentor in Paris</span><p>Directed Leibniz toward serious study of mathematics and physics in the early 1670s.</p></article>
+        <article><strong>Robert Hooke · Robert Boyle · John Pell</strong><span>Scientific contacts in London</span><p>Figures linked to the Royal Society whom Leibniz met or interacted with while presenting his calculating machine.</p></article>
+      </div>
+    </section>
+
+    <section class="why-section section dark" id="why">
+      <div class="section-number">05</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">The idea beneath the symbols</p>
+        <h2>Why invent<br>a new language?</h2>
+      </div>
+      <div class="why-copy reveal">
+        <p class="lead">Leibniz believed good notation could make difficult ideas easier to understand—and new discoveries easier to make.</p>
+        <p>Calculus emerged from his work on curves, tangents, infinitesimals, summation, areas, series, motion and physics. It wasn’t a lucky accident; it was the result of trying to represent change with clarity. He refined his symbols carefully, while Newton’s notation was less consistent and more personal.</p>
+        <div class="discovery-verdict"><span>Verdict</span><strong>Intentional, not accidental.</strong><p>Leibniz chose to study mathematical change. Huygens’s guidance deepened that work, and Leibniz deliberately searched for a symbolic system that could solve related problems.</p></div>
+      </div>
+      <div class="thought-cloud reveal" aria-label="Ideas that led Leibniz to calculus">
+        <span>curves</span><span>tangents</span><span>motion</span><span>series</span><span>areas</span><span>summation</span><span>infinitesimals</span>
+      </div>
+    </section>
+
+    <section class="comparison section">
+      <div class="section-number">06</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">Two paths to calculus</p>
+        <h2>Newton<br><em>and</em> Leibniz.</h2>
+      </div>
+      <div class="versus reveal">
+        <article>
+          <span class="initial">N</span>
+          <p class="eyebrow">Isaac Newton</p>
+          <h3>Motion & fluxions</h3>
+          <p>Newton’s approach emphasized changing quantities over time, which he called “fluxions.”</p>
+          <strong>ẋ</strong>
+        </article>
+        <div class="versus-mark">independent<br>discovery</div>
+        <article>
+          <span class="initial">L</span>
+          <p class="eyebrow">Gottfried Leibniz</p>
+          <h3>Symbols & infinitesimals</h3>
+          <p>Leibniz emphasized analysis and relationships between tiny changes. His notation became the standard.</p>
+          <strong>dy/dx</strong>
+        </article>
+      </div>
+      <p class="comparison-note reveal">The priority dispute was fierce. The legacy is clearer: although both men developed calculus, Leibniz’s notation is the one most students use today.</p>
+    </section>
+
+    <section class="facts section" aria-labelledby="facts-title">
+      <div class="section-number">07</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">Beyond the integral</p>
+        <h2 id="facts-title">Did you know?</h2>
+      </div>
+      <div class="fact-grid">
+        <article class="reveal"><span>01</span><h3>A machine that calculates</h3><p>Leibniz built an early calculating machine capable of performing all four basic arithmetic operations.</p></article>
+        <article class="reveal"><span>10</span><h3>Thinking in binary</h3><p>He helped develop the binary number system—built from zeros and ones—which later became fundamental to computing.</p></article>
+        <article class="reveal"><span>600+</span><h3>A network across Europe</h3><p>Leibniz corresponded with more than 600 people, connecting scholars and ideas across the continent.</p></article>
+      </div>
+    </section>
+
+    <section class="quiz section dark" id="quiz">
+      <div class="section-number">08</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">Check your notation</p>
+        <h2>A three-question<br>calculus coda.</h2>
+      </div>
+      <div class="quiz-panel reveal">
+        <div class="quiz-status"><span id="quizCount">Question 1 / 3</span><span id="quizScore">Score 0</span></div>
+        <h3 id="quizQuestion">What does the integral symbol’s shape come from?</h3>
+        <div class="quiz-options" id="quizOptions"></div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <button class="next-button" id="nextQuestion" disabled>Next question <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="legacy section" id="legacy">
+      <p class="eyebrow reveal">The enduring legacy</p>
+      <h2 class="reveal">He gave calculus<br><em>a language.</em></h2>
+      <p class="reveal">Leibniz’s symbols made calculus easier to write, teach and expand. More than 300 years later, his notation still appears in almost every calculus classroom.</p>
+      <div class="legacy-symbols reveal" aria-hidden="true"><span>dx</span><span>∫</span><span>dy</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a class="brand" href="#top">G.W.L.</a>
+      <p>An interactive research presentation about Gottfried Wilhelm Leibniz.</p>
+    </div>
+    <div class="sources">
+      <h2>Research sources</h2>
+      <a href="https://www.britannica.com/biography/Gottfried-Wilhelm-Leibniz" target="_blank" rel="noreferrer">Encyclopaedia Britannica ↗</a>
+      <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" target="_blank" rel="noreferrer">MacTutor: Leibniz ↗</a>
+      <a href="https://mathshistory.st-andrews.ac.uk/HistTopics/The_rise_of_calculus/" target="_blank" rel="noreferrer">MacTutor: The rise of calculus ↗</a>
+      <a href="https://plato.stanford.edu/entries/leibniz/" target="_blank" rel="noreferrer">Stanford Encyclopedia of Philosophy ↗</a>
+      <a href="https://mathshistory.st-andrews.ac.uk/Miller/mathsym/calculus/" target="_blank" rel="noreferrer">Earliest uses of calculus symbols ↗</a>
+    </div>
+    <p class="footer-mark">∫ <span>summa</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
